@@ -1,5 +1,6 @@
-import { Entity, Property, ManyToOne, Rel } from "@mikro-orm/core";
+import { Entity, Property, ManyToOne, Rel, PrimaryKey } from "@mikro-orm/core";
 import { BaseEntity } from "../shared/db/baseEntity.entity.js";
+import { Cancha } from "../cancha/cancha.entity.js";
 
 @Entity()
 export class Reserva extends BaseEntity {
@@ -23,4 +24,7 @@ export class Reserva extends BaseEntity {
 
   @Property({ nullable: false })
   idEmpleado!: number;
+
+  /* @ManyToOne(() => Cancha, { nullable: true, fieldName: 'id_cancha' })
+  cancha!: Cancha; */
 }

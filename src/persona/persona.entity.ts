@@ -17,11 +17,20 @@ export class Persona extends BaseEntity {
   dni!: number;
 
   @Property({ nullable: false })
-  phone!: number;
+  phone!: string;
 
   @Property({ nullable: false })
   email!: string;
 
   @Property({ nullable: false })
   password!: string;
+
+  @Property()
+  rol: string = 'cliente'; // Por defecto todos son clientes
+
+  @Property({ nullable: true })
+  recoverToken?: string;
+
+  @Property({ nullable: true })
+  recoverTokenExpires?: Date;
 }

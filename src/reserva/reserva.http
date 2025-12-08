@@ -31,5 +31,5 @@ Content-Type: application/json
 }
 
 ### DELETE a reserva - cancelar reserva
-@idToDelete = 31
+@idToDelete = 16
 DELETE http://localhost:3000/api/reserva/{{idToDelete}}
