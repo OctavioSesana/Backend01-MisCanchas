@@ -43,6 +43,7 @@ const ALLOWED_ORIGINS = [
   "https://mis-canchas-front.netlify.app",// Tu front en prod
   "https://mis-canchas.com",              // Dominio futuro
   "https://www.mis-canchas.com",
+  "https://backend01-miscanchas-production.up.railway.app"
 ];
 
 app.use(cors({
