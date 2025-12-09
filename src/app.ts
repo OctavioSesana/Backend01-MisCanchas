@@ -104,7 +104,7 @@ app.use((req, res) => {
 // 🚀 6. INICIO DEL SERVIDOR
 // -------------------------------------------------
 const startServer = async () => {
-  // Sync de esquema (Solo si hace falta)
+  // Sync de esquema
   if (process.env.SYNC_SCHEMA === "true") {
     await syncSchema();
     console.log('Schema sincronizado ✅');
@@ -112,7 +112,9 @@ const startServer = async () => {
 
   const port = process.env.PORT || 3000;
   
-  app.listen(port, () => {
+  // 👇👇 CAMBIO IMPORTANTE AQUÍ 👇👇
+  // Agregamos '0.0.0.0' como segundo parámetro
+  app.listen(Number(port), '0.0.0.0', () => {
     console.log(`Server is running on port ${port} ⚽`);
   });
 };
