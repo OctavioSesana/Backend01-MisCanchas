@@ -44,7 +44,8 @@ const ALLOWED_ORIGINS = [
   "https://mis-canchas.com",              // Dominio futuro
   "https://www.mis-canchas.com",
   "https://backend01-miscanchas-production.up.railway.app",
-  "https://frontend01-mis-canchas-mx7gda7ax-octavios-projects-0e658b85.vercel.app/"
+  "https://frontend01-mis-canchas-mx7gda7ax-octavios-projects-0e658b85.vercel.app/",
+  "https://frontend01-mis-canchas.vercel.app/"
 ];
 
 app.use(cors({
