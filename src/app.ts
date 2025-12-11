@@ -41,13 +41,10 @@ app.use(limiter);
 const ALLOWED_ORIGINS = [
   "http://localhost:4200",
   "http://localhost:3000",
-  "https://mis-canchas-front.netlify.app",// Tu front en prod
-  "https://mis-canchas.com",              // Dominio futuro
-  "https://www.mis-canchas.com",
-  "https://backend01-miscanchas-production.up.railway.app",
-  "https://frontend01-mis-canchas-mx7gda7ax-octavios-projects-0e658b85.vercel.app",
+  // URLs de Vercel SIN la barra al final:
   "https://frontend01-mis-canchas.vercel.app",
-  "https://frontend01-mis-canchas-octavios-projects-0e658b85.vercel.app"
+  "https://frontend01-mis-canchas-octavios-projects-0e658b85.vercel.app",
+  "https://backend01-miscanchas-production.up.railway.app"
 ];
 
 app.use(cors({
